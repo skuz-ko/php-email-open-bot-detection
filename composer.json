@@ -1,0 +1,36 @@
+{
+    "name": "skuz-ko/php-email-open-bot-detection",
+    "authors": [
+        {
+            "name": "Mykola Skuz",
+            "email": "skuz.mykola@gmail.com"
+        }
+    ],
+    "description": "A PHP library for detecting email open bots.",
+    "license": "MIT",
+    "keywords": [
+        "email",
+        "bot"
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SkuzKo\\PhpEmailOpenBotDetection\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit tests --colors"
+        ]
+    }
+}
