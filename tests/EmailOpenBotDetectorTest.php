@@ -14,8 +14,7 @@ class EmailOpenBotDetectorTest extends TestCase
      */
     public function testSuccess(string $userAgent, bool $expected): void
     {
-        $detector = new EmailOpenBotDetector();
-        $actual = $detector::isBot($userAgent);
+        $actual = EmailOpenBotDetector::isBot($userAgent);
 
         $this->assertEquals($expected, $actual);
     }

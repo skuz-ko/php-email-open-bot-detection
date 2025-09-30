@@ -20,9 +20,9 @@ composer require skuz-ko/php-email-open-bot-detection
 ```php
 <?php
 
-$detector = new SkuzKo\PhpEmailOpenBotDetection\EmailOpenBotDetector();
+use SkuzKo\PhpEmailOpenBotDetection\EmailOpenBotDetector;
 
-if ($detector->isBot($_SERVER['HTTP_USER_AGENT'])) {
+if (EmailOpenBotDetector::isBot($_SERVER['HTTP_USER_AGENT'])) {
     // Handle bot
 } else {
     // Handle real user
