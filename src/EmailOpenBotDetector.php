@@ -53,12 +53,6 @@ class EmailOpenBotDetector
         'FeedBurner/1.0 (http://www.FeedBurner.com)',
     ];
 
-    private const VALID_EMAIL_PROXIES = [
-        'GoogleImageProxy',
-        'YahooMailProxy',
-        'OutlookImageProxy',
-    ];
-
     public static function isBot(?string $userAgent): bool
     {
         $userAgent = trim((string) $userAgent);
@@ -69,12 +63,6 @@ class EmailOpenBotDetector
 
         if (in_array($userAgent, self::KNOWN_BOT_AGENTS, true)) {
             return true;
-        }
-
-        foreach (self::VALID_EMAIL_PROXIES as $proxy) {
-            if (stripos($userAgent, $proxy) !== false) {
-                return true;
-            }
         }
 
         return false;
